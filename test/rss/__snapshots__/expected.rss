@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Undercroft Labs</title>
+        <link>https://undercroftlabs.com</link>
+        <description>Tiny tools. Big ideas.</description>
+        <lastBuildDate>Sun, 20 Apr 2025 21:57:39 GMT</lastBuildDate>
+
+        <item>
+            <title>You Are Not a Data Point</title>
+            <link>https://undercroftlabs.com/blog/posts/you-are-not-a-data-point</link>
+            <guid>you-are-not-a-data-point</guid>
+            <pubDate>Sun, 20 Apr 2025 00:00:00 GMT</pubDate>
+            <description>Why Undercroft doesn&#39;t track you.</description>
+        </item>
+
+    </channel>
+</rss>

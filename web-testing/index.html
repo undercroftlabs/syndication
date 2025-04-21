@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Syndication Feed Test</title>
+    <script src="../dist/index.umd.js"></script>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        white-space: pre-wrap;
+        padding: 2rem;
+      }
+      .feed-output {
+        margin-bottom: 2rem;
+        border: 1px solid #ccc;
+        padding: 1rem;
+        border-radius: 8px;
+        background: #f9f9f9;
+      }
+      .feed-output h3 {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Feed Rendering Test</h2>
+    <div id="output"></div>
+
+    <script>
+      const output = document.getElementById("output");
+
+      const metadata = {
+        title: "Undercroft Labs",
+        description: "Tiny tools. Big ideas.",
+        id: "https://undercroftlabs.com/feed",
+        url: "https://undercroftlabs.com",
+        language: "en",
+        author: "Michael Goodwin",
+        updated: new Date().toISOString(),
+      };
+
+      const items = [
+        {
+          id: "you-are-not-a-data-point",
+          title: "You Are Not a Data Point",
+          url: "https://undercroftlabs.com/blog/posts/you-are-not-a-data-point",
+          description: "Why Undercroft doesn't track you.",
+          contentHtml: "<p>We value your privacy.</p>",
+          author: "Michael Goodwin",
+          published: "2025-04-20T00:00:00Z",
+        },
+      ];
+
+      const feeds = [
+        { name: "RSS Feed", class: window.undercroft.RssFeed },
+        { name: "JSON Feed", class: window.undercroft.JsonFeed },
+        { name: "Atom Feed", class: window.undercroft.AtomFeed },
+      ];
+
+      feeds.forEach(({ name, class: FeedClass }) => {
+        const feed = new FeedClass(metadata, items);
+        const rendered = feed.render();
+
+        const div = document.createElement("div");
+        div.className = "feed-output";
+
+        const header = document.createElement("h3");
+        header.innerText = name;
+
+        const pre = document.createElement("pre");
+        pre.innerText = rendered;
+
+        div.appendChild(header);
+        div.appendChild(pre);
+        output.appendChild(div);
+      });
+    </script>
+  </body>
+</html>

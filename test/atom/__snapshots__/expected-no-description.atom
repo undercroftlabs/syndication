@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Undercroft Labs</title>
+    <subtitle>Tiny tools. Big ideas.</subtitle>
+    <link href="https://undercroftlabs.com" />
+    <id>https://undercroftlabs.com/feed</id>
+    <updated>2025-04-20T21:57:39.581Z</updated>
+    <author><name>Michael Goodwin</name></author>
+
+<entry>
+    <title>You Are Not a Data Point</title>
+    <link href="https://undercroftlabs.com/blog/posts/you-are-not-a-data-point" />
+    <id>you-are-not-a-data-point</id>
+    <updated>2025-04-20T00:00:00.000Z</updated>
+    <published>2025-04-20T00:00:00.000Z</published>
+    <author><name>Michael Goodwin</name></author>
+    <content type="html"><![CDATA[<p>We value your privacy.</p>]]></content>
+</entry>
+
+</feed>
