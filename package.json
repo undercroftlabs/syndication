@@ -1,6 +1,6 @@
 {
   "name": "@undercroft/syndication",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -27,21 +27,15 @@
   },
   "scripts": {
     "postinstall": "husky install",
-    "prepublishOnly": "pinst --disable && npm run test:dist",
-    "postpublish": "pinst --enable",
-    "package": "npm run build && npm pack",
-    "preflight": "npm run test:ci && npm run test:dist && npm run license-check && npm run dep-check && npm run size",
-    "clean": "npx rimraf ./dist",
-    "build:esm": "tsup src/index.ts --dts --format esm,cjs --minify --sourcemap --out-dir dist",
-    "build:umd": "rollup -c",
-    "build": "npm run clean && npm run build:esm && npm run build:umd",
-    "test": "jest",
-    "test:ci": "cross-env JEST_JUNIT_CLASSNAME={filepath} jest --coverage --runInBand --reporters=default --reporters=jest-junit",
-    "test:dist": "npm run build && ts-node tools/undertools.ts test:distribution",
-    "coverage": "jest --coverage",
-    "license-check": "ts-node tools/undertools.ts licenses-check",
-    "dep-check": "ts-node tools/undertools.ts dependencies-check",
-    "size": "size-limit"
+    "prepublishOnly": "npx uct prepare",
+    "postpublish": "npx uct postpublish",
+    "package": "npx uct package",
+    "preflight": "npx uct preflight",
+    "build": "npx rimraf ./dist && npx uct build",
+    "test": "npx uct test",
+    "coverage": "npx uct coverage",
+    "test:ci": "npx uct test:ci",
+    "check": "npx uct check"
   },
   "devDependencies": {
     "@codecov/rollup-plugin": "^1.9.0",
@@ -81,6 +75,7 @@
     "ts-loader": "^9.2.5",
     "ts-node": "^10.9.1",
     "tsup": "^8.4.0",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "@undercroft/lib-tools": "^1.0.1"
   }
 }
