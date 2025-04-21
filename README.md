@@ -4,15 +4,38 @@ A lightweight, zero-dependency TypeScript library for generating RSS 2.0, Atom 1
 
 Built for projects that prioritize clarity, maintainability, and privacy-conscious tooling. Whether you’re building a blog, newsletter, or publishing platform, this library helps you publish well-formed feeds without bloat.
 
+
+[![Build Status](https://img.shields.io/github/actions/workflow/status/undercroftlabs/syndication/publish.yml)](https://github.com/undercroftlabs/syndication/actions/workflows/publish.yml)
+[![Issues Status](https://img.shields.io/github/issues/undercroftlabs/syndication)](https://github.com/undercroftlabs/syndication/issues)
+[![Pull Request Status](https://img.shields.io/github/issues-pr-raw/undercroftlabs/syndication)](https://github.com/undercroftlabs/syndication/pulls)
+[![NPM Version Status](https://img.shields.io/npm/v/@undercroft/syndication)](https://www.npmjs.com/package/@undercroft/syndication)
+[![License Status](https://img.shields.io/github/license/undercroftlabs/syndication)](https://github.com/undercroftlabs/syndication/blob/main/LICENSE)
+[![Bundle Size](https://img.shields.io/bundlephobia/minzip/@undercroft/syndication)](https://bundlephobia.com/package/@undercroft/syndication)
+[![Install Size](https://packagephobia.com/badge?p=@undercroft/syndication)](https://packagephobia.com/result?p=@undercroft/syndication)
+[![codecov](https://codecov.io/gh/undercroftlabs/syndication/graph/badge.svg?token=XLOYLAS2X1)](https://codecov.io/gh/undercroftlabs/syndication)
+[![Known Vulnerabilities](https://snyk.io/test/npm/@undercroft/syndication/badge.svg)](https://snyk.io/test/npm/@undercroft/syndication)
+
 ---
 
-## ✨ Features
+## Features
 
 - ✅ Supports RSS 2.0, Atom 1.0, and JSON Feed 1.1
 - ✅ Fully typed with TypeScript
 - ✅ Framework agnostic (Node.js, browser, static)
 - ✅ Small footprint with zero runtime dependencies
 - ✅ Works with `import`, `require`, and browser `<script>` tags
+
+---
+
+`@undercroft/syndication` Bundle Stats
+
+| Metric             | Value         |
+|--------------------|---------------|
+| Bundle size        | 5.5 kB         |
+| Minified + Gzipped | 1.9 kB         |
+| Download time      | ~2 ms (Slow 3G) |
+
+> ⚡️ Lightweight. Tree-shakable. Zero dependencies.
 
 ---
 
@@ -30,12 +53,12 @@ A UMD build is included in the `dist/` folder and exposes the global `Syndicatio
 
 ## CDNs
 
-jsDelivr: https://cdn.jsdelivr.net/npm/@undercroft/syndication/dist/index.umd.js
-unpkg: https://unpkg.com/@undercroft/syndication/dist/index.umd.js
-Skypack: https://cdn.skypack.dev/@undercroft/syndication
-esm.sh: https://esm.sh/@undercroft/syndication
-jspm: https://jspm.dev/@undercroft/syndication
-esm.run: https://esm.run/@undercroft/syndication
+- jsDelivr: https://cdn.jsdelivr.net/npm/@undercroft/syndication/dist/index.umd.js
+- unpkg: https://unpkg.com/@undercroft/syndication/dist/index.umd.js
+- Skypack: https://cdn.skypack.dev/@undercroft/syndication
+- esm.sh: https://esm.sh/@undercroft/syndication
+- jspm: https://jspm.dev/@undercroft/syndication
+- esm.run: https://esm.run/@undercroft/syndication
 
 #  Distribution & Compatibility
 
