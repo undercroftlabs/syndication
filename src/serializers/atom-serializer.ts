@@ -44,7 +44,7 @@ export default function serializeAtom(
         }
         ${
           item.description
-            ? `<summary>${escapeXml(item.description)}</summary>`
+            ? `<summary><![CDATA[${item.description}]]></summary>`
             : ''
         }
       </entry>
